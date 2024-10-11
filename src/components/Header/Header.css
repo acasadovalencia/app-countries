@@ -1,7 +1,4 @@
-.Header{
-    background-color: var(--bg-c-secondary);
-    color: var(--font-c-secondary);
-}
+
 .Header-wrapper{
     display: flex;
     flex-flow: row nowrap;

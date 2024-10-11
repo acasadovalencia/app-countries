@@ -5,8 +5,9 @@
   --font-c-secondary: hsl(200, 15%, 8%);
   --font-c-tertiary: hsl(0, 0%, 55%);
   --font-c-tertiary-dark: hsl(0, 0%, 41%);
-  --bg-c-primary: #000;
-  --bg-c-secondary: #fff;
+  --bg-c-primary: #fff;
+  --bg-c-primary-dark: ;
+  --bg-c-secondary: hsl(0, 0%, 98%);
 }
 
 /* Las adaptamos al modo oscuro */
@@ -142,4 +143,12 @@ body {
   -webkit-font-smoothing: antialiased;
   /* opcional */ 
   -moz-osx-font-smoothing: grayscale;
+}
+.Header{
+  background-color: var(--bg-c-primary);
+  color: var(--font-c-secondary);
+}
+.Main{
+  background-color: var(--bg-c-secondary);
+  height: 100vh;
 }
