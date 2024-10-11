@@ -1,0 +1,23 @@
+.Header{
+    background-color: var(--bg-c-secondary);
+    color: var(--font-c-secondary);
+}
+.Header-wrapper{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.875rem 5rem;
+}
+.Header-h1{
+    font-weight: 800;
+    font-size: 24px;
+}
+.Header-btn{
+    font-weight: 600;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: .625rem;
+}
