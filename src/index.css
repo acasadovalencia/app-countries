@@ -1,13 +1,14 @@
 /* Aquí definimos las Custom properties */
 :root {
   --font-primary: "Nunito Sans", sans-serif;
-  --font-c-primary: #fff;
-  --font-c-secondary: hsl(200, 15%, 8%);
-  --font-c-tertiary: hsl(0, 0%, 55%);
-  --font-c-tertiary-dark: hsl(0, 0%, 41%);
+  --font-c-primary: hsl(200, 15%, 8%);
+  --font-c-primary-dark: hsl(0, 0%, 100%);
   --bg-c-primary: #fff;
-  --bg-c-primary-dark: ;
+  --bg-c-primary-dark: #000;
   --bg-c-secondary: hsl(0, 0%, 98%);
+  --bg-c-secondary-dark: hsl(207, 26%, 17%);
+  --bg-c-tertiary: hsl(0, 0%, 52%);
+  --bg-c-tertiary-dark: hsl(209, 23%, 22%);
 }
 
 /* Las adaptamos al modo oscuro */
@@ -146,7 +147,7 @@ body {
 }
 .Header{
   background-color: var(--bg-c-primary);
-  color: var(--font-c-secondary);
+  color: var(--font-c-primary);
 }
 .Main{
   background-color: var(--bg-c-secondary);
