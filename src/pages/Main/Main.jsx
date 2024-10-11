@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { SearchInput } from '../../components/Header/SearchInput/SearchInput'
+import { SearchInput } from '../../components/SearchInput/SearchInput'
 import './Main.css'
 
 export const Main = ()=>{
