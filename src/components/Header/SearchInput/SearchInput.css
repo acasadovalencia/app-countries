@@ -1,0 +1,16 @@
+.Input-wrapper{
+    position: relative;
+}
+.Input-svg{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1.875rem;
+    fill: var(--font-c-primary);
+}
+.Country-input{
+    padding: 1.25rem 4.6875rem;
+    border-radius: .2rem;
+    box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.3);
+    background-color: var(--bg-c-primary);
+}
