@@ -8,14 +8,13 @@ export const FilterInput = ()=>{
 
     const regions = [... new Set(countries.map(eachCountry => eachCountry.region))]
 
-
     return(
         <>
         <form className="Filter-form">
             <select className='Filter-input' name="regions" id="regions">
                 <option value="">Filter by region</option>
                 {regions.map(eachRegion => 
-                    <option value={eachRegion}>{eachRegion}</option>
+                    <option key={eachRegion} value={eachRegion}>{eachRegion}</option>
                 )}
             </select>
         </form>
