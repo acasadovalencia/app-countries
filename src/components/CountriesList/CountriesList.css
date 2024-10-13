@@ -1,0 +1,6 @@
+.Countries-ul{
+    padding: 2.8125rem 0;
+    display: grid;
+    grid-template-columns: repeat( auto-fit , minmax(265px , 1fr));
+    gap: 4.375rem;
+}

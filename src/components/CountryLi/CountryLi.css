@@ -1,0 +1,36 @@
+.Countries-li{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: var(--bg-c-primary);
+    width: 100%;
+    box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.3);
+}
+.Countries-picture{
+    width: 100%;
+    height: 100%;
+}
+.Countries-img{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 5/3;
+}
+.Country-wrapper{
+    padding: 1.5625rem 1.5625rem 2.8125rem;
+}
+.Country-h2{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.Details-wrapper{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: .3125rem;
+    font-size: .75rem;
+}
+.Country-h3{
+    font-weight: 700;
+}
