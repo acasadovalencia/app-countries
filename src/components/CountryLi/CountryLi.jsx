@@ -1,13 +1,16 @@
 import './CountryLi.css'
+import { CountriesContext } from '../../Context/Context'
+import { useContext } from 'react'
 
-export const CountryLi = (props)=>{
 
-    const {countries} = props
+export const CountryLi = ()=>{
+
+    const {countries} = useContext(CountriesContext)
 
     return(
         <>
         {countries.length != 0 && countries.slice( 0 , 8).map( eachCountry => 
-                    <li key={eachCountry.cnn3} className='Countries-li'>
+                    <li key={eachCountry.ccn3} className='Countries-li'>
                         <picture className="Countries-picture">
                             <img src={eachCountry.flags.svg} alt="" className="Countries-img" loading='lazy' />
                         </picture>

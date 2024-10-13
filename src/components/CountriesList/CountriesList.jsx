@@ -1,17 +1,18 @@
 import './CountriesList.css'
 import { CountryLi } from '../CountryLi/CountryLi'
+import { CountriesContext } from '../../Context/Context'
+import { useContext } from 'react'
 
-export const CountriesList = (props) =>{
+export const CountriesList = () =>{
 
-    const {countries} = props
-
+    const {countries} = useContext(CountriesContext)
 
     return(
         <>
         <section className="Section-countries">
             <ul className="Countries-ul">
                 {countries.length == 0 && <li className='Countries-li'>No countries loaded</li>}
-                <CountryLi countries={countries}/>
+                {countries.length != 0 && <CountryLi/>}
             </ul>
         </section>
         </>

@@ -1,3 +1,9 @@
 .Main{
     padding: 2.8125rem 5rem;
 }
+.Inputs-wrapper{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
