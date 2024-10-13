@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { SearchInput } from '../../components/SearchInput/SearchInput'
 import './Main.css'
+import { CountriesList } from '../../components/CountriesList/CountriesList'
 
 export const Main = ()=>{
 
@@ -28,6 +29,7 @@ export const Main = ()=>{
         <>
         <main className="Main">
             <SearchInput/>
+            <CountriesList countries={countries}/>
         </main>
         </>
     )
