@@ -5,7 +5,7 @@ import { useContext } from 'react'
 export const SearchInput = ()=>{
 
     const { setSearchedCountry , searchForm , regionSelected , setRegionSelected } = useContext(CountriesContext)
-    
+        
     const { current: searchInput } = searchForm
 
     const searchHandler = (e)=>{
