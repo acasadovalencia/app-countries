@@ -5,7 +5,6 @@ import { BrowserRouter , Routes , Route } from 'react-router-dom'
 import { CountriesContext } from './Context/Context'
 import { useEffect, useState , useRef} from 'react'
 
-
 function App() {
 
   const searchForm = useRef()
@@ -15,7 +14,6 @@ function App() {
   const [ filteredRegion , setFilteredRegion ] = useState('')
 
   const [ regionSelected , setRegionSelected ] = useState('')
-
 
   const [ searchedCountry , setSearchedCountry] = useState('')
     
