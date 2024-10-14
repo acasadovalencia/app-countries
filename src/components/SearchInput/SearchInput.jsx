@@ -4,7 +4,7 @@ import { useContext } from 'react'
 
 export const SearchInput = ()=>{
 
-    const { searchedCountry , setSearchedCountry , searchForm } = useContext(CountriesContext)
+    const { setSearchedCountry , searchForm } = useContext(CountriesContext)
     
     const { current: searchInput } = searchForm
 

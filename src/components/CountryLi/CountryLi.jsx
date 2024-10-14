@@ -20,7 +20,7 @@ export const CountryLi = ()=>{
 
     return(
         <>
-        {filteredCountries.length == 0 && <li>No results... Try again!</li>}
+        {filteredCountries.length == 0 && <li className='Empty-li'>No results... Try again!</li>}
         {filteredCountries.length != 0 && filteredCountries.map( eachCountry => 
                     <li key={eachCountry.cca3} className='Countries-li'>
                         <picture className="Countries-picture">
