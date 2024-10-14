@@ -12,16 +12,21 @@ export const FilterInput = ()=>{
         setSearchedCountry('')
         setFilteredRegion(e.target.value)
         setRegionSelected(e.target.value)
+        if(e.target.value == 'all'){
+            setFilteredRegion(e.target.valiue == '')
+        }
     }
 
     return(
         <>
         <form className="Filter-form">
             <select value={regionSelected} onChange={handleSelect} className='Filter-input' name="regions" id="regions">
-                <option>Filter by region</option>
+                <option value="">Filter by region</option>
                 {regions.map(eachRegion => 
                     <option key={eachRegion} value={eachRegion}>{eachRegion}</option>
                 )}
+                <option value="all">All</option>
+
             </select>
         </form>
         </>
