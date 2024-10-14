@@ -3,14 +3,18 @@ import { Header } from './components/Header/Header'
 import { Main } from './pages/Main/Main'
 import { BrowserRouter , Routes , Route } from 'react-router-dom'
 import { CountriesContext } from './Context/Context'
-import { useEffect, useState } from 'react'
+import { useEffect, useState , useRef} from 'react'
 
 
 function App() {
 
+  const searchForm = useRef()
+
   const [ countries , setCountries] = useState([])
 
   const [ filteredRegion , setFilteredRegion ] = useState('')
+
+  const [ searchedCountry , setSearchedCountry] = useState('')
     
     const getCountries = async ()=>{
         let controller = new AbortController()
@@ -31,7 +35,7 @@ function App() {
     }, [])
 
   return (
-    <CountriesContext.Provider value={{ countries , setCountries , filteredRegion , setFilteredRegion}}>
+    <CountriesContext.Provider value={{ countries , setCountries , filteredRegion , setFilteredRegion , searchForm , searchedCountry , setSearchedCountry}}>
     <>
       <Header/>
       <BrowserRouter>

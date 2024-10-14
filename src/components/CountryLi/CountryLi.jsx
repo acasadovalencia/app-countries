@@ -5,7 +5,7 @@ import { useContext } from 'react'
 
 export const CountryLi = ()=>{
 
-    const {countries , filteredRegion} = useContext(CountriesContext)
+    const {countries , filteredRegion , searchedCountry } = useContext(CountriesContext)
 
     let filteredCountries    
 
@@ -14,10 +14,13 @@ export const CountryLi = ()=>{
         } else {
             filteredCountries = countries
         }
-        
+        if(searchedCountry){
+            filteredCountries = countries.filter(eachCountry => eachCountry.name.common.toLowerCase().includes(searchedCountry.toLowerCase()))
+        }
 
     return(
         <>
+        {filteredCountries.length == 0 && <li>No results... Try again!</li>}
         {filteredCountries.length != 0 && filteredCountries.map( eachCountry => 
                     <li key={eachCountry.cca3} className='Countries-li'>
                         <picture className="Countries-picture">
@@ -29,7 +32,7 @@ export const CountryLi = ()=>{
                                 <li className="Country-li">
                                     <div className="Details-wrapper">
                                         <h3 className="Country-h3">Population:</h3>
-                                        <span className="Country-span">{eachCountry.population}</span>
+                                        <span className="Country-span">{eachCountry.population.toLocaleString('es-ES')}</span>
                                     </div>
                                 </li>
                                 <li className="Country-li">
