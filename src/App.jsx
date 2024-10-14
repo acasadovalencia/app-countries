@@ -14,6 +14,9 @@ function App() {
 
   const [ filteredRegion , setFilteredRegion ] = useState('')
 
+  const [ regionSelected , setRegionSelected ] = useState('')
+
+
   const [ searchedCountry , setSearchedCountry] = useState('')
     
     const getCountries = async ()=>{
@@ -35,7 +38,7 @@ function App() {
     }, [])
 
   return (
-    <CountriesContext.Provider value={{ countries , setCountries , filteredRegion , setFilteredRegion , searchForm , searchedCountry , setSearchedCountry}}>
+    <CountriesContext.Provider value={{ countries , setCountries , filteredRegion , setFilteredRegion , searchForm , searchedCountry , setSearchedCountry , regionSelected , setRegionSelected}}>
     <>
       <Header/>
       <BrowserRouter>
