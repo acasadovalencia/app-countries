@@ -9,6 +9,8 @@ import { useEffect, useState } from 'react'
 function App() {
 
   const [ countries , setCountries] = useState([])
+
+  const [ filteredRegion , setFilteredRegion ] = useState('')
     
     const getCountries = async ()=>{
         let controller = new AbortController()
@@ -29,7 +31,7 @@ function App() {
     }, [])
 
   return (
-    <CountriesContext.Provider value={{ countries , setCountries}}>
+    <CountriesContext.Provider value={{ countries , setCountries , filteredRegion , setFilteredRegion}}>
     <>
       <Header/>
       <BrowserRouter>

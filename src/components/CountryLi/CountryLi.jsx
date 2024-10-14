@@ -5,12 +5,21 @@ import { useContext } from 'react'
 
 export const CountryLi = ()=>{
 
-    const {countries} = useContext(CountriesContext)
+    const {countries , filteredRegion} = useContext(CountriesContext)
+
+    let filteredCountries    
+
+        if(filteredRegion){
+            filteredCountries = countries.filter(eachCountry => eachCountry.region === filteredRegion)
+        } else {
+            filteredCountries = countries
+        }
+        
 
     return(
         <>
-        {countries.length != 0 && countries.slice( 0 , 8).map( eachCountry => 
-                    <li key={eachCountry.ccn3} className='Countries-li'>
+        {filteredCountries.length != 0 && filteredCountries.map( eachCountry => 
+                    <li key={eachCountry.cca3} className='Countries-li'>
                         <picture className="Countries-picture">
                             <img src={eachCountry.flags.svg} alt="" className="Countries-img" loading='lazy' />
                         </picture>
