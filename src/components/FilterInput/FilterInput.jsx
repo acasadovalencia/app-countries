@@ -4,11 +4,12 @@ import { CountriesContext } from '../../Context/Context'
 
 export const FilterInput = ()=>{
 
-    const { countries , setFilteredRegion } = useContext(CountriesContext)
+    const { countries , setFilteredRegion , setSearchedCountry } = useContext(CountriesContext)
 
     const regions = [... new Set(countries.map(eachCountry => eachCountry.region))]
 
     const handleSelect = (e) =>{
+        setSearchedCountry('')
         setFilteredRegion(e.target.value)
     }
 
