@@ -10,7 +10,6 @@ export const Country = ()=>{
 
     if(selectedCountry){
         countryData = countries.find(country => country.name.common == selectedCountry)
-        console.log(selectedCountry)
     }
 
     return(
