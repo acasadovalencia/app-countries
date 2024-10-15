@@ -27,7 +27,7 @@ export const CountryLi = ()=>{
         <>
         {filteredCountries.length == 0 && <li className='Empty-li'>No results... Try again!</li>}
         {filteredCountries.length != 0 && filteredCountries.map( eachCountry => 
-                    <NavLink to={`/${eachCountry.name.common}`} key={eachCountry.cca3}>
+                    <NavLink to={`/${eachCountry.cca3}`} key={eachCountry.cca3}>
                     <li onClick={()=> {selectHandler(eachCountry.name.common)}} className='Countries-li'>
                         <picture className="Countries-picture">
                             <img src={eachCountry.flags.svg} alt="" className="Countries-img" loading='lazy' />
