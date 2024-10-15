@@ -1,3 +1,76 @@
-.Country{
-    padding: 5rem;
+.Selected{
+    padding: 2.5rem 5rem 0;
+}
+.Selected-wrapper{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6.875rem;
+}
+.Selected-picture{
+    height: 100%;
+    width: 50%;
+    box-shadow: 0 0 .3rem rgba(0, 0, 0, 0.3);
+}
+.Selected-img{
+    height: 100%;
+    object-fit: cover;
+}
+.Info-wrapper{
+    width: 50%;
+}
+.Selected-h2{
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin: 0 0 2.5rem;
+}
+.Container{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 0 5rem;
+    font-size: .875rem;
+}
+.Location-ul{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: .625rem;
+}
+.Global-ul{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: .625rem;
+}
+.Title-span{
+    font-weight: 800;
+}
+.Borders-wrapper{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .625rem;
+    font-weight: 700;
+}
+.Borders-li{
+    border-radius: .2rem;
+    box-shadow: 0 0 .3rem rgba(0, 0, 0, 0.3);
+    background-color: var(--bg-c-primary);
+    font-size: .75rem;
+    padding: .3125rem .625rem;
+    font-family: var(--font-secondary);
+    font-weight: 400;
+}
+.Borders-ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .3125rem;
 }

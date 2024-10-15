@@ -3,4 +3,5 @@
     border-radius: .2rem;
     box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.3);
     background-color: var(--bg-c-primary);
+    cursor: pointer;
 }

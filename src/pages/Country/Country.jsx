@@ -34,14 +34,14 @@ export const Country = ()=>{
         <>
         <BtnBack/>
         {countryData && 
-        <article className="Article Country">
-            <div className="Article-wrapper">
-                <picture className="Country-picture">
-                        <img src={countryData.flags.svg} alt={`Flag from ${countryData.name.common}`} className="Country-img" />
+        <article className="Article Selected">
+            <div className="Selected-wrapper">
+                <picture className="Selected-picture">
+                        <img src={countryData.flags.svg} alt={countryData.flags.alt} className="Selected-img" />
                 </picture>
                 <div className="Info-wrapper">
-                    <h2 className="Country-h2">{countryData.name.common}</h2>
-                    <div className="Details-wrapper">
+                    <h2 className="Selected-h2">{countryData.name.common}</h2>
+                    <div className="Container">
                         <ul className="Location-ul">
                             <li className="Location-li"><span className="Title-span">Native name: </span>{nativeName.common}</li>
                             <li className="Location-li"><span className="Title-span">Population: </span>{countryData.population.toLocaleString('es-ES')}</li>
