@@ -1,11 +1,13 @@
 import './CountryLi.css'
 import { CountriesContext } from '../../Context/Context'
 import { useContext } from 'react'
+import { NavLink } from 'react-router-dom'
 
 
 export const CountryLi = ()=>{
 
-    const {countries , filteredRegion , searchedCountry } = useContext(CountriesContext)
+    const {countries , filteredRegion , searchedCountry , selectedCountry , setSelectedCountry } = useContext(CountriesContext)
+
 
     let filteredCountries    
 
@@ -22,6 +24,7 @@ export const CountryLi = ()=>{
         <>
         {filteredCountries.length == 0 && <li className='Empty-li'>No results... Try again!</li>}
         {filteredCountries.length != 0 && filteredCountries.map( eachCountry => 
+                    <NavLink to={`/${eachCountry.name.common}`}>
                     <li key={eachCountry.cca3} className='Countries-li'>
                         <picture className="Countries-picture">
                             <img src={eachCountry.flags.svg} alt="" className="Countries-img" loading='lazy' />
@@ -51,6 +54,7 @@ export const CountryLi = ()=>{
                         </div>
                         
                     </li>
+                    </NavLink>
                 )}
         </>
     )

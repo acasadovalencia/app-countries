@@ -16,6 +16,8 @@ function App() {
   const [ regionSelected , setRegionSelected ] = useState('')
 
   const [ searchedCountry , setSearchedCountry] = useState('')
+
+  const [ selectedCountry , setSelectedCountry ] = useState('')
     
     const getCountries = async ()=>{
         let controller = new AbortController()
@@ -36,7 +38,7 @@ function App() {
     }, [])
 
   return (
-    <CountriesContext.Provider value={{ countries , setCountries , filteredRegion , setFilteredRegion , searchForm , searchedCountry , setSearchedCountry , regionSelected , setRegionSelected}}>
+    <CountriesContext.Provider value={{ countries , setCountries , filteredRegion , setFilteredRegion , searchForm , searchedCountry , setSearchedCountry , regionSelected , setRegionSelected , selectedCountry , setSelectedCountry}}>
     <>
       <Header/>
       <BrowserRouter>
