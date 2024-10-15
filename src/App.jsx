@@ -4,6 +4,7 @@ import { Main } from './pages/Main/Main'
 import { BrowserRouter , Routes , Route } from 'react-router-dom'
 import { CountriesContext } from './Context/Context'
 import { useEffect, useState , useRef} from 'react'
+import { Country } from './pages/Country/Country'
 
 function App() {
 
@@ -44,6 +45,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Main/>}/>
+          <Route path={`/:selectedCountry`} element={<Country/>}/>
         </Routes>
       </BrowserRouter>
     </>
