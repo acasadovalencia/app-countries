@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 
 export const CountryLi = ()=>{
 
-    const {countries , filteredRegion , searchedCountry , selectedCountry , setSelectedCountry } = useContext(CountriesContext)
+    const {countries , filteredRegion , searchedCountry , setSelectedCountry } = useContext(CountriesContext)
 
     const selectHandler = (countryName) => {
         setSelectedCountry(countryName)
