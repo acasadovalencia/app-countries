@@ -51,8 +51,8 @@ export const Country = ()=>{
                     <div className="Borders-wrapper">
                         <h3 className="Borders-h3">Border Countries:</h3>
                         <ul className="Borders-ul">
-                            {countryData && countryData.borders && countryData.borders.length > 0 ? countryData.borders.map(eachBorder => 
-                                <li className="Borders-li">{eachBorder}</li>
+                            {countryData && countryData.borders && countryData.borders.length > 0 ? countryData.borders.map((eachBorder , i ) => 
+                                <li key={i} className="Borders-li">{eachBorder}</li>
                             ) : <li className="Borders-li">None</li> }
                                 
                         </ul>
