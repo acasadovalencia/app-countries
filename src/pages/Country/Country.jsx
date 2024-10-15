@@ -1,9 +1,12 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import './Country.css'
 import { CountriesContext } from '../../Context/Context'
 import { BtnBack } from '../../components/BtnBack/BtnBack'
+import { useNavigate } from 'react-router-dom'
 
 export const Country = ()=>{
+
+    const navigate = useNavigate()
 
     const { countries , selectedCountry } = useContext(CountriesContext)
 
@@ -21,10 +24,16 @@ export const Country = ()=>{
         }
     }
 
+    useEffect(()=>{
+        if(!countryData){
+            navigate('/')
+        }
+    },[])
 
     return(
         <>
         <BtnBack/>
+        {countryData && 
         <article className="Article Country">
             <div className="Article-wrapper">
                 <picture className="Country-picture">
@@ -60,6 +69,7 @@ export const Country = ()=>{
                 </div>
             </div>
         </article>
+    }
         </>
     )
 }
