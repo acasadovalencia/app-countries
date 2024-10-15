@@ -8,6 +8,9 @@ export const CountryLi = ()=>{
 
     const {countries , filteredRegion , searchedCountry , selectedCountry , setSelectedCountry } = useContext(CountriesContext)
 
+    const selectHandler = (countryName) => {
+        setSelectedCountry(countryName)
+    }
 
     let filteredCountries    
 
@@ -25,7 +28,7 @@ export const CountryLi = ()=>{
         {filteredCountries.length == 0 && <li className='Empty-li'>No results... Try again!</li>}
         {filteredCountries.length != 0 && filteredCountries.map( eachCountry => 
                     <NavLink to={`/${eachCountry.name.common}`}>
-                    <li key={eachCountry.cca3} className='Countries-li'>
+                    <li onClick={()=> {selectHandler(eachCountry.name.common)}} key={eachCountry.cca3} className='Countries-li'>
                         <picture className="Countries-picture">
                             <img src={eachCountry.flags.svg} alt="" className="Countries-img" loading='lazy' />
                         </picture>
