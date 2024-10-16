@@ -19,6 +19,8 @@ function App() {
   const [ searchedCountry , setSearchedCountry] = useState('')
 
   const [ selectedCountry , setSelectedCountry ] = useState('')
+
+  const [ enableDarkMode , setEnableDarkMode] = useState(false)
     
     const getCountries = async ()=>{
         let controller = new AbortController()
@@ -39,7 +41,7 @@ function App() {
     }, [])
 
   return (
-    <CountriesContext.Provider value={{getCountries , countries , setCountries , filteredRegion , setFilteredRegion , searchForm , searchedCountry , setSearchedCountry , regionSelected , setRegionSelected , selectedCountry , setSelectedCountry}}>
+    <CountriesContext.Provider value={{getCountries , countries , setCountries , filteredRegion , setFilteredRegion , searchForm , searchedCountry , setSearchedCountry , regionSelected , setRegionSelected , selectedCountry , setSelectedCountry , enableDarkMode , setEnableDarkMode}}>
     <>
       <BrowserRouter>
       <Header/>

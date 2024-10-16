@@ -14,12 +14,16 @@
 /* Las adaptamos al modo oscuro */
 @media (prefers-color-scheme: dark) {
   :root {
-    --negro: #ececec;
     --bg-c-secondary: var(--bg-c-secondary-dark);
     --bg-c-primary: var(--bg-c-tertiary-dark);
     --font-c-primary: var(--font-c-primary-dark)
 
   }
+}
+:root[data-theme='dark'] {
+  --bg-c-secondary: var(--bg-c-secondary-dark);
+  --bg-c-primary: var(--bg-c-tertiary-dark);
+  --font-c-primary: var(--font-c-primary-dark)
 }
 /* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
 @media (prefers-reduced-motion: reduce) {
