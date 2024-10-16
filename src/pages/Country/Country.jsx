@@ -37,7 +37,7 @@ export const Country = ()=>{
         <article className="Article Selected">
             <div className="Selected-wrapper">
                 <picture className="Selected-picture">
-                        <img src={countryData.flags.svg} alt={eachCountry.flags && countryData.flags.alt} className="Selected-img" />
+                        <img src={countryData.flags.svg} alt={`${eachCountry.flags ? countryData.flags.alt : `Flag of ${countryData.name.common}`}`} className="Selected-img" />
                 </picture>
                 <div className="Info-wrapper">
                     <h2 className="Selected-h2">{countryData.name.common}</h2>
