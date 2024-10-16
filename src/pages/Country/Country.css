@@ -1,5 +1,7 @@
 .Selected{
     padding: 2.5rem 5rem 0;
+    background-color: var(--bg-c-secondary);
+    height: calc(100vh - 14.5938rem);
 }
 .Selected-wrapper{
     display: flex;
@@ -32,6 +34,7 @@
     align-items: flex-start;
     margin: 0 0 5rem;
     font-size: .875rem;
+    gap: 2.5rem;
 }
 .Location-ul{
     display: flex;
@@ -73,4 +76,45 @@
     justify-content: flex-start;
     align-items: center;
     gap: .3125rem;
+}
+@media (max-width: 1060px){
+    .Selected-wrapper{
+        gap: 2.5rem;
+    }
+    .Container{
+        flex-flow: column nowrap;
+    }
+}
+@media (max-width:950px){
+    .Selected-picture{
+        width: 80%;
+    }
+}
+@media (max-width:685px){
+    .Selected{
+        padding: 2.5rem 2rem 0;
+        height: initial;
+    }
+    .Selected-wrapper{
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 3.75rem;
+    }
+    .Selected-picture{
+        width: 100%;
+    }
+    .Info-wrapper{
+        width: 100%;
+    }
+    .Container{
+        gap: 2.5rem;
+        margin: 0 0 2.5rem;
+    }
+    .Borders-wrapper{
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0 0 2.5rem;
+    }
 }

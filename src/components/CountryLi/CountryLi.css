@@ -39,3 +39,11 @@
 .Country-h3{
     font-weight: 700;
 }
+@media (max-width:685px){
+    .Country-link{
+        max-width: initial;
+    }
+    .Countries-li{
+        max-width: initial;
+    }
+}
