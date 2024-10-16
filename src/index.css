@@ -11,15 +11,6 @@
   --bg-c-tertiary-dark: hsl(209, 23%, 22%);
 }
 
-/* Las adaptamos al modo oscuro */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-c-secondary: var(--bg-c-secondary-dark);
-    --bg-c-primary: var(--bg-c-tertiary-dark);
-    --font-c-primary: var(--font-c-primary-dark)
-
-  }
-}
 :root[data-theme='dark'] {
   --bg-c-secondary: var(--bg-c-secondary-dark);
   --bg-c-primary: var(--bg-c-tertiary-dark);
