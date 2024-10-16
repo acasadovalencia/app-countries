@@ -21,6 +21,7 @@
 }
 .Info-wrapper{
     width: 50%;
+    color: var(--font-c-primary);
 }
 .Selected-h2{
     font-size: 1.75rem;

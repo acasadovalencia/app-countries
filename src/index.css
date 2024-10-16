@@ -15,6 +15,10 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --negro: #ececec;
+    --bg-c-secondary: var(--bg-c-secondary-dark);
+    --bg-c-primary: var(--bg-c-tertiary-dark);
+    --font-c-primary: var(--font-c-primary-dark)
+
   }
 }
 /* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */

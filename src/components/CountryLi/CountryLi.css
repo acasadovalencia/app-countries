@@ -8,6 +8,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     background-color: var(--bg-c-primary);
+    color: var(--font-c-primary);
     width: 100%;
     max-width: 500px;
     box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.3);

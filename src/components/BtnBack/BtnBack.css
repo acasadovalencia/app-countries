@@ -5,6 +5,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     background-color: var(--bg-c-secondary);
+    color: var(--font-c-primary);
 }
 .Back-btn{
     padding: .625rem 1.875rem;
