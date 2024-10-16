@@ -14,3 +14,14 @@
     box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.3);
     background-color: var(--bg-c-primary);
 }
+@media (max-width:685px){
+    .Search-form{
+        width: 100%;
+    }
+    .Input-wrapper{
+        width: 100%;
+    }
+    .Country-input{
+        width: 100%;
+    }
+}

@@ -7,3 +7,13 @@
     justify-content: space-between;
     align-items: flex-start;
 }
+
+@media (max-width:685px){
+    .Inputs-wrapper{
+        flex-flow: column nowrap;
+        gap: 3.75rem;
+    }
+    .Main{
+        padding: 2.8125rem 2rem;
+    }
+}
