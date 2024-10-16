@@ -24,6 +24,18 @@
 }
 .Country-wrapper{
     padding: 1.5625rem 1.5625rem 2.8125rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.Country-ul{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: .5rem;
 }
 .Country-h2{
     font-size: 1rem;
