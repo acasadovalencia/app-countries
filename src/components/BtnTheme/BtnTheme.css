@@ -1,0 +1,9 @@
+.Header-btn{
+    font-weight: 600;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: .625rem;
+    cursor: pointer;
+}
