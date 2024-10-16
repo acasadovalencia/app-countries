@@ -24,3 +24,8 @@
         padding: 1.875rem 2rem;
     }
 }
+@media(max-width:475px){
+    .Header-h1{
+        font-size: 1.1rem;
+    }
+}

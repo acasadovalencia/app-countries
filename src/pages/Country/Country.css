@@ -111,10 +111,42 @@
         gap: 2.5rem;
         margin: 0 0 2.5rem;
     }
+    .Languages-span::after{
+        content: ", ";
+    }
+    .Languages-span:last-child::after{
+        content: ".";
+    }
     .Borders-wrapper{
         flex-flow: column nowrap;
         justify-content: flex-start;
         align-items: flex-start;
         margin: 0 0 2.5rem;
+    }
+}
+@media (max-width:475px){
+    .Container{
+        font-size: 1.2rem;
+    }
+    .Borders-h3{
+        font-size: 1.3rem;
+    }
+    .Location-li{
+        font-weight: 300;
+    }
+    .Title-span{
+        font-weight: 700;
+    }
+    .Global-li{
+        font-weight: 300;
+    }
+    .Languages-span{
+        font-weight: 300;
+    }
+    .Borders-ul{
+        gap: 1rem;
+    }
+    .Borders-li{
+        font-size: 1.1rem;
     }
 }

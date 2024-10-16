@@ -47,3 +47,23 @@
         max-width: initial;
     }
 }
+@media (max-width:475px){
+    .Country-h2{
+        font-size: 1.5rem;
+        font-weight: 800;
+        margin: 0 0 1rem;
+    }
+    .Country-ul{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: .5rem;
+    }
+    .Details-wrapper{
+        font-size: 1.1rem;
+    }
+    .Country-span{
+        font-weight: 300;
+    }
+}
