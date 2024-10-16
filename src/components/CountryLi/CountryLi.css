@@ -1,3 +1,7 @@
+.Country-link{
+    width: 100%;
+    max-width: 500px;
+}
 .Countries-li{
     display: flex;
     flex-flow: column nowrap;
@@ -5,6 +9,7 @@
     align-items: flex-start;
     background-color: var(--bg-c-primary);
     width: 100%;
+    max-width: 500px;
     box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.3);
 }
 .Countries-picture{

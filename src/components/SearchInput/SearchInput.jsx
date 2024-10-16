@@ -4,14 +4,14 @@ import { useContext } from 'react'
 
 export const SearchInput = ()=>{
 
-    const { getCountries , setSearchedCountry , searchForm , setRegionSelected } = useContext(CountriesContext)
+    const { getCountries , countries , setSearchedCountry , searchForm , setRegionSelected } = useContext(CountriesContext)
 
     const { current: searchInput } = searchForm
 
     const searchHandler = (e)=>{
         e.preventDefault()
         getCountries()
-        const country = searchInput && searchInput.value ? searchInput.value : ''
+        const country = countries && searchInput && searchInput.value ? searchInput.value : ''
         setSearchedCountry(country)
         searchInput.value = ''
         setRegionSelected('')

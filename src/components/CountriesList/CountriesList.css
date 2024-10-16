@@ -4,6 +4,3 @@
     grid-template-columns: repeat( auto-fit , minmax(265px , 1fr));
     gap: 4.375rem;
 }
-.Countries-li:only-child{
-    max-width: 16.5625rem;
-}
