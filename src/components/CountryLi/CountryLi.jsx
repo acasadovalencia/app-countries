@@ -30,7 +30,7 @@ export const CountryLi = ()=>{
                     <NavLink className='Country-link' to={`/${eachCountry.cca3}`} key={eachCountry.cca3}>
                     <li onClick={()=> {selectHandler(eachCountry.name.common)}} className='Countries-li'>
                         <picture className="Countries-picture">
-                            <img src={eachCountry.flags.svg} alt={eachCountry.flags.alt} className="Countries-img" loading='lazy' width={'432'} height={'260'} />
+                            <img src={eachCountry.flags.svg} alt={ eachCountry.flags && eachCountry.flags.alt} className="Countries-img" loading='lazy' width={'432'} height={'260'} />
                         </picture>
                         <div className="Country-wrapper">
                             <h2 className="Country-h2">{eachCountry.name.common}</h2>
