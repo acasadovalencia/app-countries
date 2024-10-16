@@ -39,10 +39,10 @@ function App() {
     }, [])
 
   return (
-    <CountriesContext.Provider value={{ countries , setCountries , filteredRegion , setFilteredRegion , searchForm , searchedCountry , setSearchedCountry , regionSelected , setRegionSelected , selectedCountry , setSelectedCountry}}>
+    <CountriesContext.Provider value={{getCountries , countries , setCountries , filteredRegion , setFilteredRegion , searchForm , searchedCountry , setSearchedCountry , regionSelected , setRegionSelected , selectedCountry , setSelectedCountry}}>
     <>
-      <Header/>
       <BrowserRouter>
+      <Header/>
         <Routes>
           <Route path='/' element={<Main/>}/>
           <Route path={`/:selectedCountry`} element={<Country/>}/>

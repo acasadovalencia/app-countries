@@ -1,13 +1,15 @@
+import { useNavigate } from 'react-router-dom'
 import './Header.css'
 
 export const Header = ()=>{
 
+    const navigateIndex = useNavigate()
 
     return(
         <>
         <header className="Header">
             <div className="Header-wrapper">
-                <h1 className="Header-h1">Where in the world?</h1>
+                <h1 onClick={()=>navigateIndex('/')} className="Header-h1">Where in the world?</h1>
                 <button className="Header-btn">
                     <span className="Btn-span">
                         <svg className="Btn-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
