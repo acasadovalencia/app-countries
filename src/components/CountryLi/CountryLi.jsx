@@ -25,8 +25,8 @@ export const CountryLi = ()=>{
 
     return(
         <>
-        {filteredCountries.length == 0 && <li className='Empty-li'>No results... Try again!</li>}
-        {filteredCountries.length != 0 && filteredCountries.map( eachCountry => 
+        {filteredCountries && filteredCountries.length == 0 && <li className='Empty-li'>No results... Try again!</li>}
+        {filteredCountries && filteredCountries.length != 0 && filteredCountries.map( eachCountry => 
                     <NavLink className='Country-link' to={`/${eachCountry.cca3}`} key={eachCountry.cca3}>
                     <li onClick={()=> {selectHandler(eachCountry.name.common)}} className='Countries-li'>
                         <picture className="Countries-picture">

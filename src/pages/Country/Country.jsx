@@ -18,9 +18,13 @@ export const Country = ()=>{
     if(selectedCountry){
         countryData = countries.find(country => country.name.common == selectedCountry)
         if(countryData){
-            nativeName = Object.values(countryData.name.nativeName)[0]
-            currency = Object.values(countryData.currencies)[0]
-            languages = Object.values(countryData.languages)    
+            currency = countryData.currencies ? Object.values(countryData.currencies)[0] : null;
+            languages = countryData.languages ? Object.values(countryData.languages) : [];
+        }
+        if(countryData && countryData.name && countryData.name.nativeName){
+            nativeName = Object.values( countryData.name.nativeName)[0]
+        } else{
+            nativeName = 'N/A'
         }
     }
 
@@ -51,7 +55,7 @@ export const Country = ()=>{
                         </ul>
                         <ul className="Global-ul">
                             <li className="Global-li"><span className="Title-span">Top level domain: </span>{countryData.tld}</li>
-                            <li className="Global-li"><span className="Title-span">Currencies: </span>{currency.name}</li>
+                            <li className="Global-li"><span className="Title-span">Currencies: </span>{currency ? currency.name : 'N/A'}</li>
                             <li className="Global-li"><span className="Title-span">Languages: </span>{languages.map(eachLanguage => 
                                 <span key={eachLanguage} className="Languages-span">{eachLanguage}</span>
                             )}</li>
