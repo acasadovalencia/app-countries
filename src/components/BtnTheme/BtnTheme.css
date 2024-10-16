@@ -7,3 +7,42 @@
     gap: .625rem;
     cursor: pointer;
 }
+.Btn-span--wrapper{
+    position: relative;
+}
+.Btn-span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-wrap: nowrap;
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity .5s ease;
+}
+.Btn-span.hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+.Btn-span:first-child{
+    position: static;
+}
+.Btn-svg--wrapper{
+    position: relative;
+    width: 100%;
+}
+.Btn-svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-wrap: nowrap;
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity .5s ease;
+}
+.Btn-svg:first-child{
+    position: static;
+}
+.Btn-svg.hidden{
+    opacity: 0;
+    pointer-events: none;
+}
