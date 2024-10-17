@@ -11,8 +11,10 @@ export const SearchInput = ()=>{
     const searchHandler = (e)=>{
         e.preventDefault()
         getCountries()
-        const country = countries && searchInput && searchInput.value ? searchInput.value : ''
-        setSearchedCountry(country)
+        if(countries){
+            const country = countries && searchInput && searchInput.value ? searchInput.value : ''
+            setSearchedCountry(country)
+        }    
         searchInput.value = ''
         setRegionSelected('')
     }
