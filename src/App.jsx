@@ -29,7 +29,7 @@ function App() {
             signal: controller.signal,
         }
 
-        await fetch('https://restcountries.com/v3.1/all?fields=name,cca3,population,borders,flags' , options)
+        await fetch('https://restcountries.com/v3.1/all?fields=name,cca3,population,borders,region,capital,tld,currencies,languages,flags' , options)
         .then(res => res.json())
         .then( data => setCountries(data))
         .catch(err => console.log(err.message))
